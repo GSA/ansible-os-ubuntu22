@@ -1,0 +1,6 @@
+---
+
+- hosts: localhost
+  connection: local
+  roles:
+    - ansible-os-ubuntu-18
