@@ -36,7 +36,7 @@ Ansible >= 2.10
   become: yes
 
   roles:
-    - ansible-os-ubuntu20.04
+    - ansible-os-ubuntu22.04
 ```
 
 ### How to test locally
