@@ -19,7 +19,7 @@ ubtu22cis_level_1: true
 ubtu22cis_level_2: true
 
 ## Run tasks that may have an potential high impact to a running system
-ubtu22cis_disruption_high: true
+ubtu22cis_disruption_high: false
 
 ## Setting 1.4.1 will mean a password is required to boot
 ## this will allow a system boot when set to false
@@ -43,7 +43,7 @@ audit_content: git
 run_audit: false
 
 # Run heavy tests - some tests can have more impact on a system enabling these can have greater impact on a system
-audit_run_heavy_tests: true
+audit_run_heavy_tests: false
 # Timeout for those cmds that take longer to run where timeout set
 audit_cmd_timeout: 60000
 
@@ -473,7 +473,7 @@ ubtu22cis_disable_dynamic_motd: true
 # This will be the motd banner must not contain the below items in order to be compliant with Ubuntu 20 CIS
 # \m, \r, \s, \v or references to the OS platform
 ubtu22cis_warning_banner: |
-        Authorized uses only. All activity may be monitored and reported.
+        This is a U.S. General Services Administration Federal Government computer system that is FOR OFFICIAL USE ONLY. This system is subject to monitoring. Therefore, no expectation of privacy is to be assumed. Individuals found performing unauthorized activities may be subject to disciplinary action including criminal prosecution.
 
 # Control 1.8.4
 # Settings for desktop
