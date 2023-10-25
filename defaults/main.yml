@@ -176,16 +176,16 @@ ubtu22cis_rule_2_4: true
 ubtu22cis_rule_3_1_1: true
 ubtu22cis_rule_3_1_2: true
 # Network Parameters (Host Only)
-ubtu22cis_rule_3_2_1: true
-ubtu22cis_rule_3_2_2: true
+ubtu22cis_rule_3_2_1: false
+ubtu22cis_rule_3_2_2: false
 # Network Parameters (Host and Router)
-ubtu22cis_rule_3_3_1: true
+ubtu22cis_rule_3_3_1: false
 ubtu22cis_rule_3_3_2: true
 ubtu22cis_rule_3_3_3: true
 ubtu22cis_rule_3_3_4: true
 ubtu22cis_rule_3_3_5: true
 ubtu22cis_rule_3_3_6: true
-ubtu22cis_rule_3_3_7: true
+ubtu22cis_rule_3_3_7: false
 ubtu22cis_rule_3_3_8: true
 ubtu22cis_rule_3_3_9: true
 # Uncommon Network Protocols
@@ -197,11 +197,11 @@ ubtu22cis_rule_3_4_4: true
 # UFW
 ubtu22cis_rule_3_5_1_1: true
 ubtu22cis_rule_3_5_1_2: true
-ubtu22cis_rule_3_5_1_3: true
-ubtu22cis_rule_3_5_1_4: true
-ubtu22cis_rule_3_5_1_5: true
-ubtu22cis_rule_3_5_1_6: true
-ubtu22cis_rule_3_5_1_7: true
+ubtu22cis_rule_3_5_1_3: false
+ubtu22cis_rule_3_5_1_4: false
+ubtu22cis_rule_3_5_1_5: false
+ubtu22cis_rule_3_5_1_6: false
+ubtu22cis_rule_3_5_1_7: false
 # nftables
 ubtu22cis_rule_3_5_2_1: true
 ubtu22cis_rule_3_5_2_2: true
@@ -209,18 +209,18 @@ ubtu22cis_rule_3_5_2_3: true
 ubtu22cis_rule_3_5_2_4: true
 ubtu22cis_rule_3_5_2_5: true
 ubtu22cis_rule_3_5_2_6: true
-ubtu22cis_rule_3_5_2_7: true
-ubtu22cis_rule_3_5_2_8: true
+ubtu22cis_rule_3_5_2_7: false
+ubtu22cis_rule_3_5_2_8: false
 ubtu22cis_rule_3_5_2_9: true
 ubtu22cis_rule_3_5_2_10: true
 # iptables
 ubtu22cis_rule_3_5_3_1_1: true
 ubtu22cis_rule_3_5_3_1_2: true
 ubtu22cis_rule_3_5_3_1_3: true
-ubtu22cis_rule_3_5_3_2_1: true
-ubtu22cis_rule_3_5_3_2_2: true
-ubtu22cis_rule_3_5_3_2_3: true
-ubtu22cis_rule_3_5_3_2_4: true
+ubtu22cis_rule_3_5_3_2_1: false
+ubtu22cis_rule_3_5_3_2_2: false
+ubtu22cis_rule_3_5_3_2_3: false
+ubtu22cis_rule_3_5_3_2_4: false
 ubtu22cis_rule_3_5_3_3_1: true
 ubtu22cis_rule_3_5_3_3_2: true
 ubtu22cis_rule_3_5_3_3_3: true
