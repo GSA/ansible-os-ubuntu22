@@ -126,7 +126,7 @@ ubtu22cis_rule_1_9: true
 
 # Section 2 Fixes
 # Section 2 is Services (Special Purpose Services, and service clients)
-ubtu22cis_rule_2_1_1_1: true
+ubtu22cis_rule_2_1_1_1: false
 ubtu22cis_rule_2_1_1_2: true
 ubtu22cis_rule_2_1_1_3: true
 ubtu22cis_rule_2_1_1_4: true
