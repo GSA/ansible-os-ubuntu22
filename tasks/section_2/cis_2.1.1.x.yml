@@ -28,6 +28,7 @@
             - "'systemd-timesyncd' in ansible_facts.packages"
   when:
       - ubtu22cis_rule_2_1_1_1
+  ignore_errors: yes
   tags:
       - level1-server
       - level1-workstation
