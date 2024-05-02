@@ -18,8 +18,8 @@
 -w /etc/sudoers.d/ -p wa -k scope
 {% endif %}
 {% if ubtu22cis_rule_4_1_3_2 %}
--a always,exit -F arch=b64 -C euid!=uid -F euid=0 -F auid>=1000 -F auid!=4294967295 -S execve -k actions
--a always,exit -F arch=b32 -C euid!=uid -F euid=0 -F auid>=1000 -F auid!=4294967295 -S execve -k actions
+-a always,exit -F arch=b64 -C euid!=uid -F auid!=unset -S execve -k user_emulation
+-a always,exit -F arch=b32 -C euid!=uid -F auid!=unset -S execve -k user_emulation
 {% endif %}
 {% if ubtu22cis_rule_4_1_3_3 %}
 -w {{ ubtu22cis_sudo_logfile }} -p wa -k sudo_log_file
@@ -76,8 +76,8 @@
 -w /var/log/btmp -p wa -k session
 {% endif %}
 {% if ubtu22cis_rule_4_1_3_12 %}
--w /var/log/faillog -p wa -k logins
 -w /var/log/lastlog -p wa -k logins
+-w /var/run/faillock -p wa -k logins
 {% endif %}
 {% if ubtu22cis_rule_4_1_3_13 %}
 -a always,exit -F arch=b64 -S unlink,unlinkat,rename,renameat -F auid>=1000 -F auid!=4294967295 -k delete
@@ -100,9 +100,8 @@
 -a always,exit -F path=/usr/sbin/usermod -F perm=x -F auid>=1000 -F auid!=unset -k usermod
 {% endif %}
 {% if ubtu22cis_rule_4_1_3_19 %}
--a always,exit -F path=/usr/bin/kmod -F perm=x -F auid>=1000 -F auid!=unset -k kernel_modules
 -a always,exit -F arch=b64 -S init_module,finit_module,delete_module,create_module,query_module -F auid>=1000 -F auid!=unset -k kernel_modules
--a always,exit -F arch=b32 -S init_module,finit_module,delete_module,create_module,query_module -F auid>=1000 -F auid!=unset -k kernel_modules
+-a always,exit -F path=/usr/bin/kmod -F perm=x -F auid>=1000 -F auid!=unset -k kernel_modules
 {% endif %}
 {% if ubtu22cis_rule_4_1_3_20 %}
 -e 2
