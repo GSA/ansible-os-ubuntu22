@@ -118,10 +118,10 @@
         register: "audit_bins"
         loop:
             - /sbin/auditctl
-            - /sbin/aureport
-            - /sbin/ausearch
-            - /sbin/autrace
             - /sbin/auditd
+            - /sbin/ausearch
+            - /sbin/aureport
+            - /sbin/autrace
             - /sbin/augenrules
 
       - name: "4.1.4.8 | PATCH | Ensure audit tools are 755 or more restrictive | set if required"
@@ -149,10 +149,10 @@
       group: root
   loop:
       - /sbin/auditctl
-      - /sbin/aureport
-      - /sbin/ausearch
-      - /sbin/autrace
       - /sbin/auditd
+      - /sbin/ausearch
+      - /sbin/aureport
+      - /sbin/autrace
       - /sbin/augenrules
   when:
       - ubtu22cis_rule_4_1_4_9
@@ -169,10 +169,10 @@
       group: root
   loop:
       - /sbin/auditctl
-      - /sbin/aureport
-      - /sbin/ausearch
-      - /sbin/autrace
       - /sbin/auditd
+      - /sbin/ausearch
+      - /sbin/aureport
+      - /sbin/autrace
       - /sbin/augenrules
   when:
       - ubtu22cis_rule_4_1_4_10
@@ -191,10 +191,10 @@
   loop:
       - '# Audit tools'
       - /sbin/auditctl p+i+n+u+g+s+b+acl+xattrs+sha512
-      - /sbin/aureport p+i+n+u+g+s+b+acl+xattrs+sha512
-      - /sbin/ausearch p+i+n+u+g+s+b+acl+xattrs+sha512
-      - /sbin/autrace p+i+n+u+g+s+b+acl+xattrs+sha512
       - /sbin/auditd p+i+n+u+g+s+b+acl+xattrs+sha512
+      - /sbin/ausearch p+i+n+u+g+s+b+acl+xattrs+sha512
+      - /sbin/aureport p+i+n+u+g+s+b+acl+xattrs+sha512
+      - /sbin/autrace p+i+n+u+g+s+b+acl+xattrs+sha512
       - /sbin/augenrules p+i+n+u+g+s+b+acl+xattrs+sha512
   when:
       - ubtu22cis_rule_4_1_4_11 and
