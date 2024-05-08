@@ -578,9 +578,9 @@ ubtu22cis_remote_log_server: 192.168.2.100
 ubtu22cis_system_is_log_server: false
 
 # Control 4.2.1.1.x & 4.2.1.x journald
-ubtu22cis_journal_upload_serverkeyfile:
-ubtu22cis_journal_servercertificatefile:
-ubtu22cis_journal_trustedcertificatefile:
+ubtu22cis_journal_upload_serverkeyfile: /etc/ssl/private/journal-upload.pem
+ubtu22cis_journal_servercertificatefile: /etc/ssl/certs/journal-upload.pem
+ubtu22cis_journal_trustedcertificatefile: /etc/ssl/ca/trusted.pem
 # ubtu22cis_journald_systemmaxuse: SystemMaxUse=
 # ubtu22cis_journald_systemkeepfree: SystemKeepFree=
 # ubtu22cis_journald_runtimemaxuse: RuntimeMaxUse=
@@ -638,7 +638,7 @@ ubtu22cis_sugroup: nosugroup
 # Control 5.4.3
 # ubtu22cis_pamd_pwhistory_remember is number of password chnage cycles a user can re-use a password
 # This needs to be 5 or more to conform to CIS standards
-ubtu22cis_pamd_pwhistory_remember: 5
+ubtu22cis_pamd_pwhistory_remember: 24
 
 # Control 5.4.4
 # ubtu22cis_passwd_hash_algo is the hashing algorithm used

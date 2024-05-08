@@ -109,7 +109,7 @@
       - '"No change" not in ubtu22cis_rule_4_1_3_21_augen_check.stdout'
 
 - name: Auditd_immutable_check
-  ansible.builtin.shell: grep -c "^-e 2" /etc/audit/rules.d/99_auditd.rules
+  ansible.builtin.shell: grep -c "^-e 2" /etc/audit/rules.d/audit.rules
   changed_when: false
   register: auditd_immutable_check
 
