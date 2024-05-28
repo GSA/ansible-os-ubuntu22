@@ -207,22 +207,6 @@
       - journald
       - rule_4.2.1.4
 
-- name: "4.2.1.5 | PATCH | Ensure journald is not configured to send logs to rsyslog"
-  ansible.builtin.lineinfile:
-      path: /etc/systemd/journald.conf
-      regexp: '^ForwardToSyslog='
-      line: '#ForwardToSyslog=yes'
-  notify: Restart journald
-  when:
-      - ubtu22cis_rule_4_2_1_5
-  tags:
-      - level1-server
-      - level2-workstation
-      - manual
-      - patch
-      - journald
-      - rule_4.2.1.5
-
 - name: "4.2.1.6 | PATCH | Ensure journald log rotation is configured per site policy"
   ansible.builtin.lineinfile:
       path: /etc/systemd/journald.conf
