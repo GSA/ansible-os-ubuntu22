@@ -3,6 +3,30 @@
 ## This file was added to main.yml to re run some of the skipped task after section 6 
 ## All errors can be ignore
 
+- name: "1.1.1.2 | PATCH | Ensure mounting of squashfs filesystems is disabled"
+  block:
+      - name: "1.1.1.2 | PATCH | Ensure mounting of squashfs filesystems is disabled | Edit modprobe config"
+        ansible.builtin.lineinfile:
+            dest: /etc/modprobe.d/squashfs.conf
+            regexp: '^(#)?install squashfs(\\s|$)'
+            line: install squashfs /bin/true
+            create: true
+
+      - name: "1.1.1.2 | PATCH | Ensure mounting of squashfs filesystems is disabled | Disable squashfs"
+        community.general.modprobe:
+            name: squashfs
+            state: absent
+        when: ansible_connection != 'docker'
+  when:
+      - ubtu22cis_rule_1_1_1_2
+  tags:
+      - level2-server
+      - level2-workstation
+      - automated
+      - patch
+      - rule_1.1.1.2
+      - squashfs
+
 - name: "1.4.2 | PATCH | Ensure permissions on bootloader config are configured"
   block:
       - name: "1.4.2 | AUDIT | Ensure permissions on bootloader config are configured | Check for Grub file"
