@@ -187,6 +187,9 @@
   tags:
       - section6
 
+- name: Include more_task
+  ansible.builtin.import_tasks: more_task.yml
+
 - name: run auditd logic
   ansible.builtin.import_tasks: auditd.yml
   when: update_audit_template
