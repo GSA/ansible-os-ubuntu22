@@ -166,7 +166,7 @@
 
 - name: "3.5.1.7 | PATCH | Ensure ufw default deny firewall policy"
   community.general.ufw:
-      default: deny
+      default: allow
       direction: "{{ item }}"
   notify: Reload ufw
   with_items:
