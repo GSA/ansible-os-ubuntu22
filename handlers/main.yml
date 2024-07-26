@@ -1,5 +1,4 @@
 ---
-
 - name: Remount tmp
   ansible.posix.mount:
       path: /tmp
