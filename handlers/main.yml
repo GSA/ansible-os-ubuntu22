@@ -132,10 +132,11 @@
 - name: remount tmp
   ansible.builtin.shell: mount -o remount /tmp
 
-#- name: restart sshd
-#  ansible.builtin.systemd:
-#      name: sshd
-#      state: restarted
+- name: restart sshd
+  ansible.builtin.systemd:
+      name: sshd
+      state: restarted
+      ignore_errors: yes
 
 - name: reload gdm
   ansible.builtin.shell: dpkg-reconfigure gdm3
