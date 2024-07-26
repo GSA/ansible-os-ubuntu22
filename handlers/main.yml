@@ -136,7 +136,7 @@
   ansible.builtin.systemd:
       name: sshd
       state: restarted
-      ignore_errors: yes
+  ignore_errors: yes
 
 - name: reload gdm
   ansible.builtin.shell: dpkg-reconfigure gdm3
