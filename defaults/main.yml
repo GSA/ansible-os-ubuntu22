@@ -497,6 +497,10 @@ ubtu22cis_time_servers:
     - name: 169.254.169.123
       options: prefer iburst minpoll 4 maxpoll 4
 
+ubtu22cis_time_synchronization_servers:
+    - name: 169.254.169.123
+      options: prefer iburst minpoll 4 maxpoll 4
+
 # Control 2.2.15
 ubtu22cis_is_mail_server: false
 # ubtu22_cis_mail_transfer_agent is the mail transfer agent in use
