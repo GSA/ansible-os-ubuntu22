@@ -490,16 +490,12 @@ ubtu22cis_time_sync_tool: "ntp"
 # Control 2.1.2.1 2.1.3.1
 # Time settings used for all versions
 ubtu22cis_time_pool:
-    - name: time.nist.gov
-      options: iburst maxsources 4
+    - name: 169.254.169.123
+      options: prefer iburst minpoll 4 maxpoll 4
 
 ubtu22cis_time_servers:
-    - name: time-a-g.nist.gov
-      options: iburst
-    - name: time-b-g.nist.gov
-      options: iburst
-    - name: time-c-g.nist.gov
-      options: iburst
+    - name: 169.254.169.123
+      options: prefer iburst minpoll 4 maxpoll 4
 
 # Control 2.2.15
 ubtu22cis_is_mail_server: false
